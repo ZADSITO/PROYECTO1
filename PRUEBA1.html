@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mis hipervínculos</title>
+	<style type="text/css">
+		body {
+			background: linear-gradient(to right, #9fefef 100%, #98FB98 0%);
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			font-size: 36px;
+			color: white;
+			margin-top: 50px;
+			margin-bottom: 30px;
+			text-align: center;
+		}
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin: 0 auto;
+			max-width: 800px;
+		}
+		.box {
+			width: 200px;
+			height: 200px;
+			margin: 20px;
+			background-color: #FF69B4;
+			position: relative;
+			cursor: pointer;
+		}
+		.box:hover {
+			transform: scale(1.1);
+		}
+		.box:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-image: none;
+			transition: background-image 0.5s ease;
+			z-index: -1;
+		}
+		.box:hover:before {
+			background-image: url("https://via.placeholder.com/200x200");
+		}
+		.box .title {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: 0;
+			padding: 10px;
+			color: white;
+			background-color: rgba(0,0,0,0.5);
+			text-align: center;
+			opacity: 0;
+			transition: opacity 0.5s ease;
+		}
+		.box:hover .title {
+			opacity: 1;
+		}
+	</style>
+</head>
+<body>
+	<h1>Mis hipervínculos</h1>
+	<div class="container">
+		<div class="box">
+			<div class="title">
+				<a href="pagina1.html">Página 1</a>
+			</div>
+		</div>
+		<div class="box">
+			<div class="title">
+				<a href="pagina2.html">Página 2</a>
+			</div>
+		</div>
+		<div class="box">
+			<div class="title">
+				<a href="pagina3.html">Página 3</a>
+			</div>
+		</div>
+		<div class="box">
+			<div class="title">
+				<a href="pagina4.html">Página 4</a>
+			</div>
+		</div>
+		<div class="box">
+			<div class="title">
+				<a href="pagina5.html">Página 5</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
